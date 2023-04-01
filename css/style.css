@@ -868,6 +868,23 @@ h6 {
   transition: all 0.4s ease 0s;
 }
 
+.anim-upwards {
+  -webkit-transform: translate(0, 20px);
+      -ms-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+  opacity: 0.8;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.anim-upwards._watcher-view {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
 @media (min-width: 110.375em) {
   .header {
     height: 6.25rem;
