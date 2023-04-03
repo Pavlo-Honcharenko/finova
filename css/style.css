@@ -225,6 +225,14 @@ h6 {
   max-height: 67px;
 }
 
+.color-green {
+  color: green;
+}
+
+.color-red {
+  color: red;
+}
+
 .main-block {
   background-color: #f8f8f8;
 }
@@ -314,11 +322,44 @@ h6 {
   border-radius: 10px;
   overflow: hidden;
   margin: 45px auto 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-block__video img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 476px;
+  max-height: 292px;
+  margin: 0 auto;
+}
+
+.main-block__title-for-image {
+  margin: 30px auto 38px auto;
+  padding: 0 20px;
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  text-align: center;
 }
 
 .main-block__video-button {
@@ -669,6 +710,11 @@ h6 {
   opacity: 0.4;
 }
 
+.card-level__benefit-strikethrough {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
 .card-level__button {
   width: 229px;
   height: 59px;
@@ -906,6 +952,10 @@ h6 {
     font-size: 3.125rem;
   }
 
+  .main-block__title-for-image {
+    font-size: 1.5625rem;
+  }
+
   .benefits__container {
     padding-top: 6.875rem;
   }
@@ -1004,6 +1054,10 @@ h6 {
 
   .main-block__title {
     font-size: 2.375rem;
+  }
+
+  .main-block__title-for-image {
+    font-size: 1.25rem;
   }
 
   .benefits__container {
@@ -1154,6 +1208,10 @@ h6 {
             order: 1;
   }
 
+  .main-block__video {
+    display: block;
+  }
+
   .card-video__text {
     font-size: 18px;
   }
@@ -1166,6 +1224,10 @@ h6 {
 
   .main-block__column-image img {
     margin-left: 0;
+  }
+
+  .main-block__title-for-image {
+    margin-bottom: 25px;
   }
 
   .card-level__price {
@@ -1244,6 +1306,18 @@ h6 {
 @supports not (font-size: clamp( 2.375rem , 2.2090248963rem  +  0.8298755187vw , 3.125rem )) {
     .main-block__title {
       font-size: calc(2.375rem + 0.75 * (100vw - 20rem) / 90.375);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.1808437068rem  +  0.3457814661vw , 1.5625rem )) {
+    .main-block__title-for-image {
+      font-size: clamp( 1.25rem , 1.1808437068rem  +  0.3457814661vw , 1.5625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.1808437068rem  +  0.3457814661vw , 1.5625rem )) {
+    .main-block__title-for-image {
+      font-size: calc(1.25rem + 0.3125 * (100vw - 20rem) / 90.375);
     }
 }
 
