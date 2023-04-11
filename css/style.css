@@ -569,16 +569,22 @@ h6 {
   line-height: 1.2;
   letter-spacing: normal;
   text-align: left;
-  color: #666;
-  background-color: #fff;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
   border-radius: 22px;
   padding: 0 24px;
-  border: 1px solid #666;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .levels .tabs__title._tab-active {
-  background-color: #000;
+  background-color: #d7a63e;
   color: #fff;
+  opacity: 1;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .levels__cards {
@@ -914,6 +920,13 @@ h6 {
   transition: all 0.4s ease 0s;
 }
 
+.text-trial {
+  width: 100%;
+  max-width: 1375px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
 .anim-upwards {
   -webkit-transform: translate(0, 20px);
       -ms-transform: translate(0, 20px);
@@ -1188,6 +1201,10 @@ h6 {
 
   .card-video__text {
     font-size: 20px;
+  }
+
+  .text-trial {
+    text-align: center;
   }
 }
 
@@ -1509,6 +1526,18 @@ h6 {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
+  }
+
+  .levels .tabs__title:hover {
+    cursor: pointer;
+    opacity: 1;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .levels .tabs__title._tab-active:hover {
+    cursor: initial;
+    opacity: 1;
   }
 
   .card-level__button:hover {
